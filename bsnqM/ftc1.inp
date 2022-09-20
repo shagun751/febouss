@@ -1,0 +1,74 @@
+Q) Resume? (.true. / .false.)
+.false.
+Q) Resume file name (Mention the path in between quotes)
+'Resume/resume_dav3_10000000.vtk'
+
+Q) Time-stepping method (0=RK4, 1=AdBa3, 2=SSPRK3)
+0
+Q) Time-step (s)
+0.02
+Q) Run Time (s)
+20.0
+
+Q) Error limit
+1e-4
+Q) Maximum number of iterations for GMRES solver
+5000
+
+Q) Output file interval (s)
+2.5
+Q) Resume file generation interval (s)
+40.0
+Q) Wave-height reset time (s)
+4
+
+Q) Pressure term On? (.true. / .false.)
+.false.
+
+Q) Number of OpenMP Threads
+8
+Q) Wave Probes
+6
+1.0 2
+3.0 2
+5.0 2
+7.0 2
+9.0 2
+15.0 2
+Q) Velocity 3D Probes (num; X Y Z)
+0
+
+Q) Wave input type 
+Q) (0-file, 1-Airy, 2-Stokes2, 11-Fourier3, 21-Source Fnc)
+11
+Q) File | FileName
+none
+Q) ---------- No-File ----------
+Q) Time-period (s), Height (m), Depth (m), Angle (deg)
+2.0 	0.01 	0.7 	0
+Q) ---------- Source Fnc ----------
+Q) centre X (m), centre Y (m), orientation (parallel 0=y / 1=x) 
+0.0 	0.0  	0
+Q) n (width = nL/2), length (m) (-1 = full length)
+1.0  	-1
+Q) ---------- Time Ramp ----------
+Q) start(s) end(s) | (-1 -1 to disable) (not for source fnc)
+0  4
+
+Q) Bottom Friction On ? (.true. / .false.)
+.false.
+Q) Manning Coefficient (Default: 0.033)
+0.033
+
+Q) Outlet Sponge layer (BOUSS2D method)
+Q) Enable? (.true. / .false.)
+.false.
+Q) Regions (Num; Type | Lim | length | waveT) (Type: 1234 -> NWSE)
+1
+4 40 10 2.0
+
+Q) Porous layer definition
+Q) Enable? (.true. / .false.)
+.false.
+Q) Regions (Num; Por | LeftBottom X Y | RightTop X Y) (0 = file)
+0

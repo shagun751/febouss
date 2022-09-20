@@ -1,0 +1,142 @@
+log_bsnq_gq_v1.00
+
+-----------------------------------------------
+Versions bsnqM_v1.xx.xx
+
+continued from bsnq_par_v8.36
+- Quad Jacobian = Linear Jacobian for Triangle
+- Analytical Integration
+- Object Oriented Programming
+- Predictor Corrector Time-stepping
+-----------------------------------------------
+
+-v1.01
+Attempting
+	- bsnqModule with all the required variables
+
+
+-----------------------------------------------
+Versions bsnq_gq_v1.xx.xx
+
+continued from bsnq_par_v8.36
+- Quad Jacobian
+- Isoparametric - P Q
+- Superparametric - eta, w
+- Gauss Quadrature Integration
+-----------------------------------------------
+
+
+-----------------------------------------------
+Versions bsnq_par_v8.xx.xx
+
+continued from bsnq_par_v7.3.6
+Aim is wave breaking
+-----------------------------------------------
+
+-v8.36
+Attmepting
+	- Created gsMatroxSet1
+		- Following matrices
+			- mass1 [6x6]
+			- mass2 [3x3]
+			- porLam [6x6]
+			- gCxF [3x6] (toDo second term)
+			- gCyF [3x6] (toDo second term)
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.35
+Attempting
+	- Added shapeFnc module
+		- Contain gauss points info
+		- Uses above to initialise Quad and Lin shape fncs
+		- jacbType included in this module
+	- Currently keeping the linear jacobian inverse also		
+	- Verified the shF, jacb and gauss-quad using area of elements	
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.34
+Attempting
+	- Added basicVars module
+	- removed some garbage from the bsnqQuadMain.f90
+
+Result
+	- Verified by comparing base rect2D with v8.33
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.33
+Attempting
+	- Added ship modules
+	- Added ship shape, pressure and position functions
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.32
+Attempting
+	- Made a single standard mesh format. The other mesh formats will be converted to this using auxiliary codes.
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.31
+Attempting
+	- Removing the smoothing code
+	  - Removing shephard module
+	- Removed GMRES_Ma bloatcode
+	- Removed GmresMaNewComm.f90
+	- Removing all mesh types except for 1
+	- Moved the old subroutines files into the following location
+		[-x-] Archive : ~/Acads/ProjectB/Boussinesq/Codes/Trial 20/Trial 20 - Logs/Old Subroutines
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+-v8.21
+Removing all Kennedy breaking implementation
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.9
+Linearising the turbulent stress expression to remove 1/d and *d
+The earlier expression was as per Sorenson paper
+This expression is as per Kennedy paper
+Removing the calculation of etadt by backward diff at bndtype 12 13 which was done in v8.2 as it was taken care of in v8.8 through Neumann
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.8
+Linearising brVsc
+Neumann boundary condition for etadt
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.7
+Modiying brB value to 3s^2-2s^3 
+where s=(etadt/etadt* - 1)/brCns(5)
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.3
+Adding turbulent stress terms
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.2
+Detecting breaking by etadt condition
+Calculating brB and brVisc 
+brVisc filtered through N-poin avging
+
+Calculating etadt at boundary nodes using backward difference. It was never needed before so didn't do. 
+From observation of the numerical results it can be concluded that calculation of this at boundary nodes is required.
+
+[Note 1]:For calculating the turbulent stress terms, the eddy viscosity is calculated at the nth time step but the P/d comes from the (n-1)th time step. Have to check if this is okay.
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.1
+Removed the old Turbulence code.
+Created code 9 rout file
+Added Celerity
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-v8.4
+removing the existing avg of immediate conn
+Shephard search and cubic spline weight 
+Speed calculation using system_clock
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+
+
+
+
+

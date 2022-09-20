@@ -1,0 +1,108 @@
+Number of Ships
+1
+
+---Ship3---
+Q) Pressure function
+1
+Q) Ship shape constants (Cl  Cb  al)
+0.7  0.4
+
+Q) Ship dimensions (L   B   T) (m m m)
+5   2   0.2
+
+Q) Initialise eta along ship shape?
+.false.
+
+Q) Ship force calculation paramters
+Q) Calculate ship drag (.true./.false.)
+.true.
+Q) Interpolation (maxNeighbours)
+40
+Q) Ship rectangle (NL NB) (min 3 each. odd) (no. of div = NX-1)
+21 21
+
+Q) Num of ship position points
+2
+Q) Ship centre track (T  X	Y  Th) (s m	m deg)
+0        5.0		21.5    0
+26      91.0		21.5    0
+
+
+---Ship3---
+Q) Pressure function
+1
+Q) Ship shape constants (Cl  Cb  al)
+0.7  0.4
+
+Q) Ship dimensions (L   B   T) (m m m)
+5   2   0.2
+
+Q) Initialise eta along ship shape?
+.false.
+
+Q) Ship force calculation paramters
+Q) Calculate ship drag (.true./.false.)
+.false.
+Q) Interpolation (maxNeighbours)
+40
+Q) Ship rectangle (NL NB) (min 3 each. odd) (no. of div = NX-1)
+21 21
+
+Q) Num of ship position points
+2
+Q) Ship centre track (T  X	Y  Th) (s m	m deg)
+0       -3.0		21.5    0
+28      95.0		21.5    0
+
+
+---Ship1---
+Q) Pressure function
+2
+Q) Ship shape constants (Cl  Cb  al)
+16  2   16
+
+Q) Ship dimensions (L   B   T) (m m m)
+5   1   0.2
+
+Q) Initialise eta along ship shape?
+.false.
+
+Q) Ship force calculation paramters
+Q) Calculate ship drag (.true./.false.)
+.false.
+Q) Interpolation (maxNeighbours)
+40
+Q) Ship rectangle (NL NB) (min 3 each. odd) (no. of div = NX-1)
+21 21
+
+Q) Num of ship position points
+2
+Q) Ship centre track (T  X	Y  Th) (s m	m deg)
+0       -3.0		21.5    0
+28      95.0		21.5    0
+
+
+---Ship2---
+Q) Pressure function
+3
+
+Q) Ship dimensions (L   B   T) (m m m)
+5   1   0.2
+
+Q) Initialise eta along ship shape?
+.false.
+
+Q) Ship force calculation paramters
+Q) Calculate ship drag (.true./.false.)
+.false.
+Q) Interpolation (maxNeighbours)
+40
+Q) Ship rectangle (NL NB) (min 3 each. odd) (no. of div = NX-1)
+21 21
+
+Q) Num of ship position points
+2
+Q) Ship centre track (T  X	Y  Th) (s m	m deg)
+0       10.0		21.5    0
+25      97.5		21.5    0
+

@@ -1,0 +1,9 @@
+Output/
+Resume/
+Output_*/
+*.rout
+*.fnpt
+Analysis_*/
+Data/
+Test_*/
+
